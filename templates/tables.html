@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V03</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<table data-vertable="ver1">
+					 <a href="" style="width:25%" class="btn btn-warning"><i class="fas fa-truck-moving">طلبيات التكسي </i></a>
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">name of driver</th>
+								<th class="column100 column2" data-column="column2">Status</th>
+								<th class="column100 column3" data-column="column3">client name</th>
+								<th class="column100 column4" data-column="column4">phonenumber</th>
+								<th class="column100 column5" data-column="column5">age of driver</th>
+								<th class="column100 column6" data-column="column6">location</th>
+								<th class="column100 column7" data-column="column7">the direct</th>
+								
+							</tr>
+						</thead>
+						{% for i in taxi %}
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">{{i.The_beneficial_driver}}</td>
+								<td class="column100 column2" data-column="column2">{{i.status}}</td>
+								<td class="column100 column3" data-column="column3">{{i.client_name}}</td>
+								<td class="column100 column4" data-column="column4">{{i.phonenumber}}</td>
+								<td class="column100 column5" data-column="column5">{{i.age_of_driver}}</td>
+								<td class="column100 column6" data-column="column6">{{i.location}}</td>
+								<td class="column100 column7" data-column="column7">{{i.To}}</td>
+							</tr>
+						</tbody>
+						{% endfor %}
+					</table>
+				</div>
+
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+					 <a href="" style="width:25%" class="btn btn-warning"><i class="fas fa-truck-moving">طلبيات الباصات </i></a>
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">name of driver</th>
+								<th class="column100 column2" data-column="column2">Status</th>
+								<th class="column100 column3" data-column="column3">client name</th>
+								<th class="column100 column4" data-column="column4">phonenumber</th>
+								<th class="column100 column6" data-column="column6">location</th>
+								<th class="column100 column7" data-column="column7">the direct</th>
+							</tr>
+						</thead>
+						{% for i in bus %}
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">{{i.The_beneficial_driver}}</td>
+								<td class="column100 column2" data-column="column2">{{i.status}}</td>
+								<td class="column100 column3" data-column="column3">{{i.client_name}}</td>
+								<td class="column100 column4" data-column="column4">{{i.phonenumber}}</td>
+								<td class="column100 column6" data-column="column6">{{i.location}}</td>
+								<td class="column100 column7" data-column="column7">{{i.To}}</td>
+							</tr>
+
+						</tbody>
+						{% endfor %}
+					</table>
+				</div>
+
+				<div class="table100 ver3 m-b-110">
+					<table data-vertable="ver3">
+					 <a href="" style="width:25%" class="btn btn-warning"><i class="fas fa-truck-moving">طلبيات الحمل </i></a>
+						<thead>
+							<tr class="row100 head">
+							
+								<th class="column100 column1" data-column="column1">name of driver</th>
+								<th class="column100 column2" data-column="column2">Status</th>
+								<th class="column100 column3" data-column="column3">client name</th>
+								<th class="column100 column4" data-column="column4">phonenumber</th>
+								<th class="column100 column5" data-column="column5">Type of load</th>
+								<th class="column100 column6" data-column="column6">location</th>
+								<th class="column100 column7" data-column="column7">the direct</th>
+							</tr>
+						</thead>
+						{% for i in truck %}
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">{{i.The_beneficial_driver}}</td>
+								<td class="column100 column2" data-column="column2">{{i.status}}</td>
+								<td class="column100 column3" data-column="column3">{{i.client_name}}</td>
+								<td class="column100 column4" data-column="column4">{{i.phonenumber}}</td>
+								<td class="column100 column4" data-column="column4">{{i.Type_of_load}}</td>
+								<td class="column100 column6" data-column="column6">{{i.location}}</td>
+								<td class="column100 column7" data-column="column7">{{i.To}}</td>
+							</tr>
+							</tr>
+						</tbody>
+						{% endfor %}
+					</table>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>
