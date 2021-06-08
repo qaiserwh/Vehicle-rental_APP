@@ -10,5 +10,7 @@ urlpatterns = [
     path('login',views.admin_login,name='login'),
     path('tables',views.tables,name='tables'),
     path('price',views.price,name='price'),
+    path('vip',views.vip,name='vip'),
     path('about',views.about,name='about')
 ]
+
