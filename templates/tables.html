@@ -35,8 +35,8 @@
 								<th class="column100 column1" data-column="column1">name of driver</th>
 								<th class="column100 column2" data-column="column2">Status</th>
 								<th class="column100 column3" data-column="column3">client name</th>
-								<th class="column100 column4" data-column="column4">phonenumber</th>
-								<th class="column100 column5" data-column="column5">age of driver</th>
+								<th class="column100 column4" data-column="column4">phone number</th>
+								<th class="column100 column4" data-column="column4">time</th>
 								<th class="column100 column6" data-column="column6">location</th>
 								<th class="column100 column7" data-column="column7">the direct</th>
 								
@@ -49,7 +49,7 @@
 								<td class="column100 column2" data-column="column2">{{i.status}}</td>
 								<td class="column100 column3" data-column="column3">{{i.client_name}}</td>
 								<td class="column100 column4" data-column="column4">{{i.phonenumber}}</td>
-								<td class="column100 column5" data-column="column5">{{i.age_of_driver}}</td>
+								<td class="column100 column5" data-column="column5">{{i.time}}</td>
 								<td class="column100 column6" data-column="column6">{{i.location}}</td>
 								<td class="column100 column7" data-column="column7">{{i.To}}</td>
 							</tr>
@@ -67,6 +67,7 @@
 								<th class="column100 column2" data-column="column2">Status</th>
 								<th class="column100 column3" data-column="column3">client name</th>
 								<th class="column100 column4" data-column="column4">phonenumber</th>
+								<th class="column100 column4" data-column="column4">time</th>
 								<th class="column100 column6" data-column="column6">location</th>
 								<th class="column100 column7" data-column="column7">the direct</th>
 							</tr>
@@ -78,6 +79,7 @@
 								<td class="column100 column2" data-column="column2">{{i.status}}</td>
 								<td class="column100 column3" data-column="column3">{{i.client_name}}</td>
 								<td class="column100 column4" data-column="column4">{{i.phonenumber}}</td>
+								<td class="column100 column4" data-column="column4">{{i.time}}</td>
 								<td class="column100 column6" data-column="column6">{{i.location}}</td>
 								<td class="column100 column7" data-column="column7">{{i.To}}</td>
 							</tr>
@@ -86,7 +88,38 @@
 						{% endfor %}
 					</table>
 				</div>
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+					 <a href="" style="width:25%" class="btn btn-warning"><i class="fas fa-truck-moving">Vip </i></a>
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">name of driver</th>
+								<th class="column100 column2" data-column="column2">Status</th>
+								<th class="column100 column3" data-column="column3">client name</th>
+								<th class="column100 column4" data-column="column4">phonenumber</th>
+								<th class="column100 column6" data-column="column6">price</th>
+								<th class="column100 column6" data-column="column6">time</th>
+								<th class="column100 column6" data-column="column6">location</th>
+								<th class="column100 column7" data-column="column7">the direct</th>
+							</tr>
+						</thead>
+						{% for i in vip %}
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">{{i.The_beneficial_driver}}</td>
+								<td class="column100 column2" data-column="column2">{{i.status}}</td>
+								<td class="column100 column3" data-column="column3">{{i.client_name}}</td>
+								<td class="column100 column4" data-column="column4">{{i.phonenumber}}</td>
+								<td class="column100 column3" data-column="column3">{{i.price}}</td>
+								<td class="column100 column3" data-column="column3">{{i.time}}</td>
+								<td class="column100 column6" data-column="column6">{{i.location}}</td>
+								<td class="column100 column7" data-column="column7">{{i.To}}</td>
+							</tr>
 
+						</tbody>
+						{% endfor %}
+					</table>
+				</div>
 				<div class="table100 ver3 m-b-110">
 					<table data-vertable="ver3">
 					 <a href="" style="width:25%" class="btn btn-warning"><i class="fas fa-truck-moving">طلبيات الحمل </i></a>
@@ -97,6 +130,7 @@
 								<th class="column100 column2" data-column="column2">Status</th>
 								<th class="column100 column3" data-column="column3">client name</th>
 								<th class="column100 column4" data-column="column4">phonenumber</th>
+								<th class="column100 column3" data-column="column3">time</th>
 								<th class="column100 column5" data-column="column5">Type of load</th>
 								<th class="column100 column6" data-column="column6">location</th>
 								<th class="column100 column7" data-column="column7">the direct</th>
@@ -109,6 +143,7 @@
 								<td class="column100 column2" data-column="column2">{{i.status}}</td>
 								<td class="column100 column3" data-column="column3">{{i.client_name}}</td>
 								<td class="column100 column4" data-column="column4">{{i.phonenumber}}</td>
+								<td class="column100 column4" data-column="column4">{{i.time}}</td>
 								<td class="column100 column4" data-column="column4">{{i.Type_of_load}}</td>
 								<td class="column100 column6" data-column="column6">{{i.location}}</td>
 								<td class="column100 column7" data-column="column7">{{i.To}}</td>
