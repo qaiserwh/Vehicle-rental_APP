@@ -1,13 +1,14 @@
-from Taxi_app.models import Buse, Drivers, Taxie, Truckse
+from Taxi_app.models import Buse, Drivers, Taxie, Truckse, VipBuse
 from django.shortcuts import render,redirect
 from django.contrib.auth import authenticate, login
-from . forms import  TaxiForm,BusForm ,TrucksForm,DriverForm ,AdminLoginForm
+from . forms import  TaxiForm,BusForm ,TrucksForm,DriverForm ,AdminLoginForm, VipBusForm
 # Create your views here.
 def tables(request):
     context={
         'taxi':Taxie.objects.all(),
         'bus':Buse.objects.all(),
-        'truck':Truckse.objects.all()
+        'truck':Truckse.objects.all(),
+        'vip':VipBuse.objects.all()
 
 
     }
@@ -91,6 +92,29 @@ def Busorder(request):
     }
 
     return render(request,'Busorder.html',context)
+
+def vip(request):
+    if request.method =='POST':
+        vipBus_Order =VipBusForm(request.POST, request.FILES)
+        if vipBus_Order.is_valid():
+            vipBus_Order.save()
+            return  redirect('index')
+            
+
+    context ={
+        'name_of_clint': VipBuse.objects.all(),
+        'the_number_phone_of_clint':VipBuse.objects.all(),
+        'price':VipBuse.objects.all(),
+        'time':VipBuse.objects.all(),
+        'forms':VipBusForm(),
+        'age_of_driver':VipBuse.objects.all(),
+        'location':VipBuse.objects.all(),
+        'To':VipBuse.objects.all(),
+
+        
+    }
+
+    return render(request,'vip.html',context)
 
 def Driversorder(request):
     if request.method =='POST':
